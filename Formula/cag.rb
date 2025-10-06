@@ -1,4 +1,4 @@
-class CleanArchitectureGenerator < Formula
+class Cag < Formula
   desc "Generate clean architecture boilerplate for Kotlin"
   homepage "https://github.com/EranBoudjnah/CleanArchitectureGenerator"
   url "https://github.com/EranBoudjnah/CleanArchitectureGenerator/releases/download/cli-v0.0.2/cag-0.0.2.tar"
