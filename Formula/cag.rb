@@ -9,7 +9,13 @@ class Cag < Formula
 
   def install
     libexec.install Dir["lib/*"]
-    bin.install "bin/cag"
+
+    (bin/"cag").write <<~EOS
+      #!/bin/bash
+      exec java -cp "#{libexec}/*" com.mitteloupe.cag.cli.MainKt "$@"
+    EOS
+    (bin/"cag").chmod 0755
+
     bin.install "bin/cag.bat"
   end
 
