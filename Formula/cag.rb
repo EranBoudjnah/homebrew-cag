@@ -17,4 +17,3 @@ class Cag < Formula
     assert_match "0.0.2", shell_output("#{bin}/cag --version")
   end
 end
-
