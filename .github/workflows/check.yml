@@ -1,0 +1,32 @@
+name: Homebrew Formula Audit
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "Formula/**" # Adjust this if your formula is stored elsewhere
+  pull_request:
+    branches: [master]
+    paths:
+      - "Formula/**"
+
+jobs:
+  audit:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        run: |
+          echo "::group::Installing Homebrew (if needed)"
+          which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          echo "::endgroup::"
+          brew --version
+
+      - name: Tap custom formula
+        run: brew tap EranBoudjnah/cag
+
+      - name: Audit formula
+        run: brew audit --new --strict EranBoudjnah/cag/cag
