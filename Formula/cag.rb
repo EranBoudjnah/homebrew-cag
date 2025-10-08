@@ -1,8 +1,8 @@
 class Cag < Formula
   desc "Generate clean architecture boilerplate for Kotlin"
   homepage "https://github.com/EranBoudjnah/CleanArchitectureGenerator"
-  url "https://github.com/EranBoudjnah/CleanArchitectureGenerator/releases/download/cli-v0.0.2/cag-0.0.2.tar"
-  sha256 "f6b0e15ce15abb7f78521bc3f2e659bd014d38c551075ed52ffee3283d646214"
+  url "https://github.com/EranBoudjnah/CleanArchitectureGenerator/releases/download/v0.3.0/cag-0.3.0.tar"
+  sha256 "7c423e32e4aa0ca319ebadcd3f8506f45c97d343ddc3bd632a1c581d18c7d300"
   license "MIT"
 
   depends_on "openjdk"
