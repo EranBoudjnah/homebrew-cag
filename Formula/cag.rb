@@ -1,8 +1,8 @@
 class Cag < Formula
   desc "Generate clean architecture boilerplate for Kotlin"
   homepage "https://github.com/EranBoudjnah/CleanArchitectureGenerator"
-  url "https://github.com/EranBoudjnah/CleanArchitectureGenerator/releases/download/v0.4.0/cag-0.4.0.tar"
-  sha256 "f4aeeb452c48ddc39b03cd1bf53a8d92bf8392d864d649fdc88adcecb6f3b288"
+  url "https://github.com/EranBoudjnah/CleanArchitectureGenerator/releases/download/v0.4.1/cag-0.4.1.tar"
+  sha256 "6af34bded5839bac43d40cc238b1264f0f88293088e9262e379459f22ed1f10a"
   license "MIT"
 
   depends_on "openjdk"
@@ -20,6 +20,6 @@ class Cag < Formula
   end
 
   test do
-    assert_match "0.0.2", shell_output("#{bin}/cag --version")
+    assert_match "0.4.1", shell_output("#{bin}/cag --version")
   end
 end
